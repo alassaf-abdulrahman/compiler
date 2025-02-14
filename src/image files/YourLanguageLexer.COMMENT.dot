@@ -1,0 +1,29 @@
+digraph ATN {
+rankdir=LR;
+s48[fontsize=11, label="48", shape=doublecircle, fixedsize=true, width=.6];
+s47[fontsize=11,label="47", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s179[fontsize=11,label="179", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s180[fontsize=11,label="180", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s181[fontsize=11,label="181", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s182[fontsize=11,label="182", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s183[fontsize=11,label="&rarr;\n183*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s184[fontsize=11,label="&larr;\n184", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s185[fontsize=11,label="{185*\nd=4|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s186[fontsize=11,label="186", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s187[fontsize=11,label="187*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s188[fontsize=11,label="188", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s189[fontsize=11,label="189", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s47 -> s179 [fontname="Times-Italic", label="&epsilon;"];
+s179 -> s180 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'/'", arrowhead = normal];
+s180 -> s181 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'/'", arrowhead = normal];
+s181 -> s185 [fontname="Times-Italic", label="&epsilon;"];
+s185:p0 -> s183 [fontname="Times-Italic", label="&epsilon;"];
+s185:p1 -> s186 [fontname="Times-Italic", label="&epsilon;"];
+s183 -> s182 [fontname="Times-Italic", label="&epsilon;"];
+s186 -> s188 [fontname="Times-Italic", label="&epsilon;"];
+s182 -> s184 [fontsize=11, fontname="Courier", arrowsize=.7, label = "~{'\\n', ''}", arrowhead = normal];
+s188 -> s189 [fontsize=11, fontname="Courier", arrowsize=.7, label = "action_23:0", arrowhead = normal];
+s184 -> s187 [fontname="Times-Italic", label="&epsilon;"];
+s189 -> s48 [fontname="Times-Italic", label="&epsilon;"];
+s187 -> s185 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+}
