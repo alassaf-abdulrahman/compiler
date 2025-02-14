@@ -219,11 +219,17 @@ function LanguageInterpreter() {
       return;
     }
     try {
+      const token = tokenize(input);
+      const list = [];
       const result = parse(input);
       // Generate a confirmation message for each action.
       const messages = result.actions.map(getConfirmationMessage);
-      setOutput(messages.join("\n"));
-      setError("");
+      for (const tok of token) {
+        list.push(tok.type);
+      }
+      setOutput("Token parsed :"+ list + "\n\n" + messages.join("\n"));
+      //setOutput(messages.join("\n"));
+      //setError("");
     } catch (err) {
       setError(err.message);
       setOutput("");
