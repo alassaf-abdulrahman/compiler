@@ -32,6 +32,24 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 	}
 
 
+	// Enter a parse tree produced by YourLanguageParser#simpleCommand.
+	enterSimpleCommand(ctx) {
+	}
+
+	// Exit a parse tree produced by YourLanguageParser#simpleCommand.
+	exitSimpleCommand(ctx) {
+	}
+
+
+	// Enter a parse tree produced by YourLanguageParser#controlCommand.
+	enterControlCommand(ctx) {
+	}
+
+	// Exit a parse tree produced by YourLanguageParser#controlCommand.
+	exitControlCommand(ctx) {
+	}
+
+
 	// Enter a parse tree produced by YourLanguageParser#basicCommand.
 	enterBasicCommand(ctx) {
 	}
@@ -101,15 +119,6 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 
 	// Exit a parse tree produced by YourLanguageParser#elseBlock.
 	exitElseBlock(ctx) {
-	}
-
-
-	// Enter a parse tree produced by YourLanguageParser#block.
-	enterBlock(ctx) {
-	}
-
-	// Exit a parse tree produced by YourLanguageParser#block.
-	exitBlock(ctx) {
 	}
 
 

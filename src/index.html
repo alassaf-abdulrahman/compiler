@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Language</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Smart Home Language</h1>
+    <h3>Input Source Code Below:</h3>
+    <div class="editor-container">
+        <!-- Line numbers -->
+        <div class="line-numbers">
+            <pre id="line-numbers">1</pre>
+        </div>
+
+        <!-- Text input area -->
+        <textarea id="input" placeholder="Enter your code here..." spellcheck="false"></textarea>
+    </div>
+
+    <!-- Parse button -->
+    <button onclick="parse()">Parse</button>
+
+    <br><br>
+    <!-- Output tokens and compilation message -->
+    <div class="output-container">
+        <h3>Output Tokens:</h3>
+        <textarea id="output-tokens" readonly></textarea>
+
+        <br><br>
+        <h3>Compilation Message:</h3>
+        <div id="compilation-message"></div>
+    </div>
+
+
+
+    <script src="texteditor.js"></script>
+    <script src="bundle.js"></script>
+</body>
+</html>
