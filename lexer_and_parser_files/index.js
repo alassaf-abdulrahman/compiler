@@ -1,6 +1,7 @@
 import antlr4 from 'antlr4';
 import YourLanguageLexer from './YourLanguageLexer.js';
 import YourLanguageParser from './YourLanguageParser.js';
+import { buildAST, visualizeAST } from './astdisplay.js';
 
 // Token type dictionary
 const tokenTypes = {
@@ -54,6 +55,7 @@ class ErrorListener extends antlr4.error.ErrorListener {
 function parse() {
     try {
         const input = document.getElementById('input').value;
+        document.getElementById('ast-visualization').innerHTML = '';
         const chars = new antlr4.InputStream(input);
         const lexer = new YourLanguageLexer(chars);
         const tokens = new antlr4.CommonTokenStream(lexer);
@@ -63,7 +65,7 @@ function parse() {
         parser.removeErrorListeners();
         parser.addErrorListener(errorListener);
 
-        const tree = parser.program();
+        const parseTree = parser.program();
 
         // Check for ERROR_CHAR tokens
         const errorChars = tokens.tokens.filter(token => token.type === YourLanguageLexer.ERROR_CHAR);
@@ -105,6 +107,7 @@ function parse() {
             compilationMessage.innerHTML = `<div class="error">${errorMessages.join('<br>')}</div>`;
         } else {
             compilationMessage.innerHTML = `<div class="success">Compilation successful!</div>`;
+            visualizeAST(parseTree, '#ast-visualization');
         }
     } catch (e) {
         const compilationMessage = document.getElementById('compilation-message');

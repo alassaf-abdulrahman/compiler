@@ -112,3 +112,34 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#ast-visualization {
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+    background-color: white;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: #3498db;
+    stroke-width: 2px;
+}
+
+.node text {
+    font: 12px monospace;
+    fill: #2c3e50;
+}
+
+.link {
+    fill: none;
+    stroke: #95a5a6;
+    stroke-width: 1px;
+}
+
+.ast-container {
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 15px;
+}
