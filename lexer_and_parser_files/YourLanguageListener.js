@@ -1,5 +1,4 @@
-// Generated from ./YourLanguage.g4 by ANTLR 4.13.2
-// jshint ignore: start
+
 import antlr4 from 'antlr4';
 
 // This class defines a complete listener for a parse tree produced by YourLanguageParser.

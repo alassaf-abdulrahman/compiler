@@ -3,7 +3,7 @@ grammar YourLanguage;
 // Top-level program structure
 program: commandList EOF;
 
-// Command list (left-factored and LL(1) compliant)
+// Command list 
 commandList
     : simpleCommand SEMICOLON commandList
     | controlCommand commandList
@@ -15,7 +15,7 @@ simpleCommand
     : basicCommand scheduleTiming?
     ;
 
-// Scheduling (left-factored and LL(1) compliant)
+// Scheduling 
 scheduleTiming
     : AT TIME
     | IN DURATION

@@ -37,17 +37,17 @@ const tokenTypes = {
 class ErrorListener extends antlr4.error.ErrorListener {
     constructor() {
         super();
-        this.errors = []; // Store all errors
+        this.errors = []; 
     }
 
     syntaxError(recognizer, offendingSymbol, line, column, msg, err) {
         const errorMessage = `Syntax error at line ${line}: Character ${column + 1} - ${msg}`;
-        this.errors.push({ line, message: errorMessage }); // Add error to the list with line number
+        this.errors.push({ line, message: errorMessage }); 
     }
 
     addInvalidTokenError(token) {
         const errorMessage = `Invalid character at line ${token.line}: Character ${token.column + 1} - '${token.text}'`;
-        this.errors.push({ line: token.line, message: errorMessage }); // Add invalid token error to the list with line number
+        this.errors.push({ line: token.line, message: errorMessage }); 
     }
 }
 
@@ -71,7 +71,7 @@ function parse() {
         const errorChars = tokens.tokens.filter(token => token.type === YourLanguageLexer.ERROR_CHAR);
         if (errorChars.length > 0) {
             errorChars.forEach(token => {
-                errorListener.addInvalidTokenError(token); // Add invalid token errors
+                errorListener.addInvalidTokenError(token); 
             });
         }
 
