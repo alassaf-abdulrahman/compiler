@@ -1,4 +1,4 @@
-// Generated from YourLanguage.g4 by ANTLR 4.13.2
+// Generated from ./YourLanguage.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 
@@ -23,15 +23,6 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 	}
 
 
-	// Enter a parse tree produced by YourLanguageParser#command.
-	enterCommand(ctx) {
-	}
-
-	// Exit a parse tree produced by YourLanguageParser#command.
-	exitCommand(ctx) {
-	}
-
-
 	// Enter a parse tree produced by YourLanguageParser#simpleCommand.
 	enterSimpleCommand(ctx) {
 	}
@@ -41,12 +32,12 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 	}
 
 
-	// Enter a parse tree produced by YourLanguageParser#controlCommand.
-	enterControlCommand(ctx) {
+	// Enter a parse tree produced by YourLanguageParser#scheduleTiming.
+	enterScheduleTiming(ctx) {
 	}
 
-	// Exit a parse tree produced by YourLanguageParser#controlCommand.
-	exitControlCommand(ctx) {
+	// Exit a parse tree produced by YourLanguageParser#scheduleTiming.
+	exitScheduleTiming(ctx) {
 	}
 
 
@@ -95,12 +86,12 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 	}
 
 
-	// Enter a parse tree produced by YourLanguageParser#scheduleTiming.
-	enterScheduleTiming(ctx) {
+	// Enter a parse tree produced by YourLanguageParser#controlCommand.
+	enterControlCommand(ctx) {
 	}
 
-	// Exit a parse tree produced by YourLanguageParser#scheduleTiming.
-	exitScheduleTiming(ctx) {
+	// Exit a parse tree produced by YourLanguageParser#controlCommand.
+	exitControlCommand(ctx) {
 	}
 
 
@@ -164,24 +155,6 @@ export default class YourLanguageListener extends antlr4.tree.ParseTreeListener 
 
 	// Exit a parse tree produced by YourLanguageParser#turnState.
 	exitTurnState(ctx) {
-	}
-
-
-	// Enter a parse tree produced by YourLanguageParser#time.
-	enterTime(ctx) {
-	}
-
-	// Exit a parse tree produced by YourLanguageParser#time.
-	exitTime(ctx) {
-	}
-
-
-	// Enter a parse tree produced by YourLanguageParser#duration.
-	enterDuration(ctx) {
-	}
-
-	// Exit a parse tree produced by YourLanguageParser#duration.
-	exitDuration(ctx) {
 	}
 
 

@@ -3,33 +3,29 @@ grammar YourLanguage;
 // Top-level program structure
 program: commandList EOF;
 
-// Command list allows both commands (with semicolons) and control structures (without semicolons)
+// Command list (left-factored and LL(1) compliant)
 commandList
-    : (simpleCommand ';' | controlCommand) commandList? 
-    | error
+    : simpleCommand SEMICOLON commandList
+    | controlCommand commandList
+    | // Empty production
     ;
 
-// Commands are split into two categories:
-// 1. Simple commands (require semicolons)
-// 2. Control commands (no semicolons)
-command
-    : simpleCommand 
-    | controlCommand 
-    ;
-
+// Simple command with optional scheduling
 simpleCommand
-    : basicCommand scheduleTiming?  // Basic commands with optional scheduling
+    : basicCommand scheduleTiming?
     ;
 
-controlCommand
-    : ifCommand                     // Control flow
+// Scheduling (left-factored and LL(1) compliant)
+scheduleTiming
+    : AT TIME
+    | IN DURATION
     ;
 
 // Basic command types
 basicCommand
-    : openCommand 
-    | closeCommand 
-    | turnonCommand 
+    : openCommand
+    | closeCommand
+    | turnonCommand
     | turnoffCommand
     ;
 
@@ -39,16 +35,17 @@ closeCommand: CLOSE openTask;
 turnonCommand: TURNON turnTask;
 turnoffCommand: TURNOFF turnTask;
 
-// Scheduling
-scheduleTiming: (AT time | IN duration);
-
 // Control flow
-ifCommand: IF condition LBRACE commandList? RBRACE elseBlock?;
-elseBlock: ELSE LBRACE commandList? RBRACE;
+controlCommand
+    : ifCommand
+    ;
+
+ifCommand: IF condition LBRACE commandList RBRACE elseBlock?;
+elseBlock: ELSE LBRACE commandList RBRACE;
 
 // Conditions
 condition
-    : openTask IS openState 
+    : openTask IS openState
     | turnTask IS turnState
     ;
 
@@ -59,10 +56,6 @@ turnTask: LIGHT | WIFI | AIRCOND;
 // States
 openState: OPENED | CLOSED;
 turnState: ON | OFF;
-
-// Parser rules for time and duration
-time: TIME;
-duration: DURATION;
 
 // Lexer rules for keywords
 OPEN: 'OPEN';

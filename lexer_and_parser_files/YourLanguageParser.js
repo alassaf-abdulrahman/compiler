@@ -1,45 +1,39 @@
-// Generated from YourLanguage.g4 by ANTLR 4.13.2
+// Generated from ./YourLanguage.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 import YourLanguageListener from './YourLanguageListener.js';
-const serializedATN = [4,1,27,136,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
+const serializedATN = [4,1,27,116,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,
 4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,
-2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,
-20,7,20,1,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,50,8,1,1,1,3,1,53,8,1,1,1,3,1,56,
-8,1,1,2,1,2,3,2,60,8,2,1,3,1,3,3,3,64,8,3,1,4,1,4,1,5,1,5,1,5,1,5,3,5,72,
-8,5,1,6,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,1,9,1,9,1,9,1,10,1,10,1,10,1,10,
-3,10,90,8,10,1,11,1,11,1,11,1,11,3,11,96,8,11,1,11,1,11,3,11,100,8,11,1,
-12,1,12,1,12,3,12,105,8,12,1,12,1,12,1,13,1,13,1,13,1,13,1,13,1,13,1,13,
-1,13,3,13,117,8,13,1,14,1,14,1,15,1,15,1,16,1,16,1,17,1,17,1,18,1,18,1,19,
-1,19,1,20,4,20,132,8,20,11,20,12,20,133,1,20,0,0,21,0,2,4,6,8,10,12,14,16,
-18,20,22,24,26,28,30,32,34,36,38,40,0,4,1,0,10,11,1,0,12,14,1,0,15,16,1,
-0,17,18,128,0,42,1,0,0,0,2,55,1,0,0,0,4,59,1,0,0,0,6,61,1,0,0,0,8,65,1,0,
-0,0,10,71,1,0,0,0,12,73,1,0,0,0,14,76,1,0,0,0,16,79,1,0,0,0,18,82,1,0,0,
-0,20,89,1,0,0,0,22,91,1,0,0,0,24,101,1,0,0,0,26,116,1,0,0,0,28,118,1,0,0,
-0,30,120,1,0,0,0,32,122,1,0,0,0,34,124,1,0,0,0,36,126,1,0,0,0,38,128,1,0,
-0,0,40,131,1,0,0,0,42,43,3,2,1,0,43,44,5,0,0,1,44,1,1,0,0,0,45,46,3,6,3,
-0,46,47,5,19,0,0,47,50,1,0,0,0,48,50,3,8,4,0,49,45,1,0,0,0,49,48,1,0,0,0,
-50,52,1,0,0,0,51,53,3,2,1,0,52,51,1,0,0,0,52,53,1,0,0,0,53,56,1,0,0,0,54,
-56,3,40,20,0,55,49,1,0,0,0,55,54,1,0,0,0,56,3,1,0,0,0,57,60,3,6,3,0,58,60,
-3,8,4,0,59,57,1,0,0,0,59,58,1,0,0,0,60,5,1,0,0,0,61,63,3,10,5,0,62,64,3,
-20,10,0,63,62,1,0,0,0,63,64,1,0,0,0,64,7,1,0,0,0,65,66,3,22,11,0,66,9,1,
-0,0,0,67,72,3,12,6,0,68,72,3,14,7,0,69,72,3,16,8,0,70,72,3,18,9,0,71,67,
-1,0,0,0,71,68,1,0,0,0,71,69,1,0,0,0,71,70,1,0,0,0,72,11,1,0,0,0,73,74,5,
-1,0,0,74,75,3,28,14,0,75,13,1,0,0,0,76,77,5,2,0,0,77,78,3,28,14,0,78,15,
-1,0,0,0,79,80,5,3,0,0,80,81,3,30,15,0,81,17,1,0,0,0,82,83,5,4,0,0,83,84,
-3,30,15,0,84,19,1,0,0,0,85,86,5,7,0,0,86,90,3,36,18,0,87,88,5,8,0,0,88,90,
-3,38,19,0,89,85,1,0,0,0,89,87,1,0,0,0,90,21,1,0,0,0,91,92,5,5,0,0,92,93,
-3,26,13,0,93,95,5,20,0,0,94,96,3,2,1,0,95,94,1,0,0,0,95,96,1,0,0,0,96,97,
-1,0,0,0,97,99,5,21,0,0,98,100,3,24,12,0,99,98,1,0,0,0,99,100,1,0,0,0,100,
-23,1,0,0,0,101,102,5,6,0,0,102,104,5,20,0,0,103,105,3,2,1,0,104,103,1,0,
-0,0,104,105,1,0,0,0,105,106,1,0,0,0,106,107,5,21,0,0,107,25,1,0,0,0,108,
-109,3,28,14,0,109,110,5,9,0,0,110,111,3,32,16,0,111,117,1,0,0,0,112,113,
-3,30,15,0,113,114,5,9,0,0,114,115,3,34,17,0,115,117,1,0,0,0,116,108,1,0,
-0,0,116,112,1,0,0,0,117,27,1,0,0,0,118,119,7,0,0,0,119,29,1,0,0,0,120,121,
-7,1,0,0,121,31,1,0,0,0,122,123,7,2,0,0,123,33,1,0,0,0,124,125,7,3,0,0,125,
-35,1,0,0,0,126,127,5,22,0,0,127,37,1,0,0,0,128,129,5,23,0,0,129,39,1,0,0,
-0,130,132,5,27,0,0,131,130,1,0,0,0,132,133,1,0,0,0,133,131,1,0,0,0,133,134,
-1,0,0,0,134,41,1,0,0,0,12,49,52,55,59,63,71,89,95,99,104,116,133];
+2,13,7,13,2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,1,0,1,0,1,0,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,3,1,48,8,1,1,2,1,2,3,2,52,8,2,1,3,1,3,1,3,1,3,3,3,
+58,8,3,1,4,1,4,1,4,1,4,3,4,64,8,4,1,5,1,5,1,5,1,6,1,6,1,6,1,7,1,7,1,7,1,
+8,1,8,1,8,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,10,3,10,86,8,10,1,11,1,11,1,
+11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,101,8,12,1,13,
+1,13,1,14,1,14,1,15,1,15,1,16,1,16,1,17,4,17,112,8,17,11,17,12,17,113,1,
+17,0,0,18,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,0,4,1,0,10,11,
+1,0,12,14,1,0,15,16,1,0,17,18,107,0,36,1,0,0,0,2,47,1,0,0,0,4,49,1,0,0,0,
+6,57,1,0,0,0,8,63,1,0,0,0,10,65,1,0,0,0,12,68,1,0,0,0,14,71,1,0,0,0,16,74,
+1,0,0,0,18,77,1,0,0,0,20,79,1,0,0,0,22,87,1,0,0,0,24,100,1,0,0,0,26,102,
+1,0,0,0,28,104,1,0,0,0,30,106,1,0,0,0,32,108,1,0,0,0,34,111,1,0,0,0,36,37,
+3,2,1,0,37,38,5,0,0,1,38,1,1,0,0,0,39,40,3,4,2,0,40,41,5,19,0,0,41,42,3,
+2,1,0,42,48,1,0,0,0,43,44,3,18,9,0,44,45,3,2,1,0,45,48,1,0,0,0,46,48,1,0,
+0,0,47,39,1,0,0,0,47,43,1,0,0,0,47,46,1,0,0,0,48,3,1,0,0,0,49,51,3,8,4,0,
+50,52,3,6,3,0,51,50,1,0,0,0,51,52,1,0,0,0,52,5,1,0,0,0,53,54,5,7,0,0,54,
+58,5,22,0,0,55,56,5,8,0,0,56,58,5,23,0,0,57,53,1,0,0,0,57,55,1,0,0,0,58,
+7,1,0,0,0,59,64,3,10,5,0,60,64,3,12,6,0,61,64,3,14,7,0,62,64,3,16,8,0,63,
+59,1,0,0,0,63,60,1,0,0,0,63,61,1,0,0,0,63,62,1,0,0,0,64,9,1,0,0,0,65,66,
+5,1,0,0,66,67,3,26,13,0,67,11,1,0,0,0,68,69,5,2,0,0,69,70,3,26,13,0,70,13,
+1,0,0,0,71,72,5,3,0,0,72,73,3,28,14,0,73,15,1,0,0,0,74,75,5,4,0,0,75,76,
+3,28,14,0,76,17,1,0,0,0,77,78,3,20,10,0,78,19,1,0,0,0,79,80,5,5,0,0,80,81,
+3,24,12,0,81,82,5,20,0,0,82,83,3,2,1,0,83,85,5,21,0,0,84,86,3,22,11,0,85,
+84,1,0,0,0,85,86,1,0,0,0,86,21,1,0,0,0,87,88,5,6,0,0,88,89,5,20,0,0,89,90,
+3,2,1,0,90,91,5,21,0,0,91,23,1,0,0,0,92,93,3,26,13,0,93,94,5,9,0,0,94,95,
+3,30,15,0,95,101,1,0,0,0,96,97,3,28,14,0,97,98,5,9,0,0,98,99,3,32,16,0,99,
+101,1,0,0,0,100,92,1,0,0,0,100,96,1,0,0,0,101,25,1,0,0,0,102,103,7,0,0,0,
+103,27,1,0,0,0,104,105,7,1,0,0,105,29,1,0,0,0,106,107,7,2,0,0,107,31,1,0,
+0,0,108,109,7,3,0,0,109,33,1,0,0,0,110,112,5,27,0,0,111,110,1,0,0,0,112,
+113,1,0,0,0,113,111,1,0,0,0,113,114,1,0,0,0,114,35,1,0,0,0,7,47,51,57,63,
+85,100,113];
 
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -62,12 +56,11 @@ export default class YourLanguageParser extends antlr4.Parser {
                              "ON", "OFF", "SEMICOLON", "LBRACE", "RBRACE", 
                              "TIME", "DURATION", "COMMENT", "MULTILINE_COMMENT", 
                              "WS", "ERROR_CHAR" ];
-    static ruleNames = [ "program", "commandList", "command", "simpleCommand", 
-                         "controlCommand", "basicCommand", "openCommand", 
-                         "closeCommand", "turnonCommand", "turnoffCommand", 
-                         "scheduleTiming", "ifCommand", "elseBlock", "condition", 
-                         "openTask", "turnTask", "openState", "turnState", 
-                         "time", "duration", "error" ];
+    static ruleNames = [ "program", "commandList", "simpleCommand", "scheduleTiming", 
+                         "basicCommand", "openCommand", "closeCommand", 
+                         "turnonCommand", "turnoffCommand", "controlCommand", 
+                         "ifCommand", "elseBlock", "condition", "openTask", 
+                         "turnTask", "openState", "turnState", "error" ];
 
     constructor(input) {
         super(input);
@@ -84,9 +77,9 @@ export default class YourLanguageParser extends antlr4.Parser {
 	    this.enterRule(localctx, 0, YourLanguageParser.RULE_program);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 42;
+	        this.state = 36;
 	        this.commandList();
-	        this.state = 43;
+	        this.state = 37;
 	        this.match(YourLanguageParser.EOF);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -107,74 +100,8 @@ export default class YourLanguageParser extends antlr4.Parser {
 	commandList() {
 	    let localctx = new CommandListContext(this, this._ctx, this.state);
 	    this.enterRule(localctx, 2, YourLanguageParser.RULE_commandList);
-	    var _la = 0;
 	    try {
-	        this.state = 55;
-	        this._errHandler.sync(this);
-	        switch(this._input.LA(1)) {
-	        case 1:
-	        case 2:
-	        case 3:
-	        case 4:
-	        case 5:
-	            this.enterOuterAlt(localctx, 1);
-	            this.state = 49;
-	            this._errHandler.sync(this);
-	            switch(this._input.LA(1)) {
-	            case 1:
-	            case 2:
-	            case 3:
-	            case 4:
-	                this.state = 45;
-	                this.simpleCommand();
-	                this.state = 46;
-	                this.match(YourLanguageParser.SEMICOLON);
-	                break;
-	            case 5:
-	                this.state = 48;
-	                this.controlCommand();
-	                break;
-	            default:
-	                throw new antlr4.error.NoViableAltException(this);
-	            }
-	            this.state = 52;
-	            this._errHandler.sync(this);
-	            _la = this._input.LA(1);
-	            if((((_la) & ~0x1f) === 0 && ((1 << _la) & 134217790) !== 0)) {
-	                this.state = 51;
-	                this.commandList();
-	            }
-
-	            break;
-	        case 27:
-	            this.enterOuterAlt(localctx, 2);
-	            this.state = 54;
-	            this.error();
-	            break;
-	        default:
-	            throw new antlr4.error.NoViableAltException(this);
-	        }
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
-	command() {
-	    let localctx = new CommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 4, YourLanguageParser.RULE_command);
-	    try {
-	        this.state = 59;
+	        this.state = 47;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 1:
@@ -182,13 +109,24 @@ export default class YourLanguageParser extends antlr4.Parser {
 	        case 3:
 	        case 4:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 57;
+	            this.state = 39;
 	            this.simpleCommand();
+	            this.state = 40;
+	            this.match(YourLanguageParser.SEMICOLON);
+	            this.state = 41;
+	            this.commandList();
 	            break;
 	        case 5:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 58;
+	            this.state = 43;
 	            this.controlCommand();
+	            this.state = 44;
+	            this.commandList();
+	            break;
+	        case -1:
+	        case 21:
+	            this.enterOuterAlt(localctx, 3);
+
 	            break;
 	        default:
 	            throw new antlr4.error.NoViableAltException(this);
@@ -211,17 +149,17 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	simpleCommand() {
 	    let localctx = new SimpleCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 6, YourLanguageParser.RULE_simpleCommand);
+	    this.enterRule(localctx, 4, YourLanguageParser.RULE_simpleCommand);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 61;
+	        this.state = 49;
 	        this.basicCommand();
-	        this.state = 63;
+	        this.state = 51;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===7 || _la===8) {
-	            this.state = 62;
+	            this.state = 50;
 	            this.scheduleTiming();
 	        }
 
@@ -241,13 +179,30 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 
 
-	controlCommand() {
-	    let localctx = new ControlCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 8, YourLanguageParser.RULE_controlCommand);
+	scheduleTiming() {
+	    let localctx = new ScheduleTimingContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 6, YourLanguageParser.RULE_scheduleTiming);
 	    try {
-	        this.enterOuterAlt(localctx, 1);
-	        this.state = 65;
-	        this.ifCommand();
+	        this.state = 57;
+	        this._errHandler.sync(this);
+	        switch(this._input.LA(1)) {
+	        case 7:
+	            this.enterOuterAlt(localctx, 1);
+	            this.state = 53;
+	            this.match(YourLanguageParser.AT);
+	            this.state = 54;
+	            this.match(YourLanguageParser.TIME);
+	            break;
+	        case 8:
+	            this.enterOuterAlt(localctx, 2);
+	            this.state = 55;
+	            this.match(YourLanguageParser.IN);
+	            this.state = 56;
+	            this.match(YourLanguageParser.DURATION);
+	            break;
+	        default:
+	            throw new antlr4.error.NoViableAltException(this);
+	        }
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -266,29 +221,29 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	basicCommand() {
 	    let localctx = new BasicCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 10, YourLanguageParser.RULE_basicCommand);
+	    this.enterRule(localctx, 8, YourLanguageParser.RULE_basicCommand);
 	    try {
-	        this.state = 71;
+	        this.state = 63;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 1:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 67;
+	            this.state = 59;
 	            this.openCommand();
 	            break;
 	        case 2:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 68;
+	            this.state = 60;
 	            this.closeCommand();
 	            break;
 	        case 3:
 	            this.enterOuterAlt(localctx, 3);
-	            this.state = 69;
+	            this.state = 61;
 	            this.turnonCommand();
 	            break;
 	        case 4:
 	            this.enterOuterAlt(localctx, 4);
-	            this.state = 70;
+	            this.state = 62;
 	            this.turnoffCommand();
 	            break;
 	        default:
@@ -312,12 +267,12 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	openCommand() {
 	    let localctx = new OpenCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 12, YourLanguageParser.RULE_openCommand);
+	    this.enterRule(localctx, 10, YourLanguageParser.RULE_openCommand);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 73;
+	        this.state = 65;
 	        this.match(YourLanguageParser.OPEN);
-	        this.state = 74;
+	        this.state = 66;
 	        this.openTask();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -337,12 +292,12 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	closeCommand() {
 	    let localctx = new CloseCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 14, YourLanguageParser.RULE_closeCommand);
+	    this.enterRule(localctx, 12, YourLanguageParser.RULE_closeCommand);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 76;
+	        this.state = 68;
 	        this.match(YourLanguageParser.CLOSE);
-	        this.state = 77;
+	        this.state = 69;
 	        this.openTask();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -362,12 +317,12 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	turnonCommand() {
 	    let localctx = new TurnonCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 16, YourLanguageParser.RULE_turnonCommand);
+	    this.enterRule(localctx, 14, YourLanguageParser.RULE_turnonCommand);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 79;
+	        this.state = 71;
 	        this.match(YourLanguageParser.TURNON);
-	        this.state = 80;
+	        this.state = 72;
 	        this.turnTask();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -387,12 +342,12 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	turnoffCommand() {
 	    let localctx = new TurnoffCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 18, YourLanguageParser.RULE_turnoffCommand);
+	    this.enterRule(localctx, 16, YourLanguageParser.RULE_turnoffCommand);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 82;
+	        this.state = 74;
 	        this.match(YourLanguageParser.TURNOFF);
-	        this.state = 83;
+	        this.state = 75;
 	        this.turnTask();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -410,29 +365,13 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 
 
-	scheduleTiming() {
-	    let localctx = new ScheduleTimingContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 20, YourLanguageParser.RULE_scheduleTiming);
+	controlCommand() {
+	    let localctx = new ControlCommandContext(this, this._ctx, this.state);
+	    this.enterRule(localctx, 18, YourLanguageParser.RULE_controlCommand);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 89;
-	        this._errHandler.sync(this);
-	        switch(this._input.LA(1)) {
-	        case 7:
-	            this.state = 85;
-	            this.match(YourLanguageParser.AT);
-	            this.state = 86;
-	            this.time();
-	            break;
-	        case 8:
-	            this.state = 87;
-	            this.match(YourLanguageParser.IN);
-	            this.state = 88;
-	            this.duration();
-	            break;
-	        default:
-	            throw new antlr4.error.NoViableAltException(this);
-	        }
+	        this.state = 77;
+	        this.ifCommand();
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
 		        localctx.exception = re;
@@ -451,31 +390,25 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	ifCommand() {
 	    let localctx = new IfCommandContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 22, YourLanguageParser.RULE_ifCommand);
+	    this.enterRule(localctx, 20, YourLanguageParser.RULE_ifCommand);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 91;
+	        this.state = 79;
 	        this.match(YourLanguageParser.IF);
-	        this.state = 92;
+	        this.state = 80;
 	        this.condition();
-	        this.state = 93;
+	        this.state = 81;
 	        this.match(YourLanguageParser.LBRACE);
-	        this.state = 95;
-	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 134217790) !== 0)) {
-	            this.state = 94;
-	            this.commandList();
-	        }
-
-	        this.state = 97;
+	        this.state = 82;
+	        this.commandList();
+	        this.state = 83;
 	        this.match(YourLanguageParser.RBRACE);
-	        this.state = 99;
+	        this.state = 85;
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        if(_la===6) {
-	            this.state = 98;
+	            this.state = 84;
 	            this.elseBlock();
 	        }
 
@@ -497,23 +430,16 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	elseBlock() {
 	    let localctx = new ElseBlockContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 24, YourLanguageParser.RULE_elseBlock);
-	    var _la = 0;
+	    this.enterRule(localctx, 22, YourLanguageParser.RULE_elseBlock);
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 101;
+	        this.state = 87;
 	        this.match(YourLanguageParser.ELSE);
-	        this.state = 102;
+	        this.state = 88;
 	        this.match(YourLanguageParser.LBRACE);
-	        this.state = 104;
-	        this._errHandler.sync(this);
-	        _la = this._input.LA(1);
-	        if((((_la) & ~0x1f) === 0 && ((1 << _la) & 134217790) !== 0)) {
-	            this.state = 103;
-	            this.commandList();
-	        }
-
-	        this.state = 106;
+	        this.state = 89;
+	        this.commandList();
+	        this.state = 90;
 	        this.match(YourLanguageParser.RBRACE);
 	    } catch (re) {
 	    	if(re instanceof antlr4.error.RecognitionException) {
@@ -533,30 +459,30 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	condition() {
 	    let localctx = new ConditionContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 26, YourLanguageParser.RULE_condition);
+	    this.enterRule(localctx, 24, YourLanguageParser.RULE_condition);
 	    try {
-	        this.state = 116;
+	        this.state = 100;
 	        this._errHandler.sync(this);
 	        switch(this._input.LA(1)) {
 	        case 10:
 	        case 11:
 	            this.enterOuterAlt(localctx, 1);
-	            this.state = 108;
+	            this.state = 92;
 	            this.openTask();
-	            this.state = 109;
+	            this.state = 93;
 	            this.match(YourLanguageParser.IS);
-	            this.state = 110;
+	            this.state = 94;
 	            this.openState();
 	            break;
 	        case 12:
 	        case 13:
 	        case 14:
 	            this.enterOuterAlt(localctx, 2);
-	            this.state = 112;
+	            this.state = 96;
 	            this.turnTask();
-	            this.state = 113;
+	            this.state = 97;
 	            this.match(YourLanguageParser.IS);
-	            this.state = 114;
+	            this.state = 98;
 	            this.turnState();
 	            break;
 	        default:
@@ -580,11 +506,11 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	openTask() {
 	    let localctx = new OpenTaskContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 28, YourLanguageParser.RULE_openTask);
+	    this.enterRule(localctx, 26, YourLanguageParser.RULE_openTask);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 118;
+	        this.state = 102;
 	        _la = this._input.LA(1);
 	        if(!(_la===10 || _la===11)) {
 	        this._errHandler.recoverInline(this);
@@ -611,11 +537,11 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	turnTask() {
 	    let localctx = new TurnTaskContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 30, YourLanguageParser.RULE_turnTask);
+	    this.enterRule(localctx, 28, YourLanguageParser.RULE_turnTask);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 120;
+	        this.state = 104;
 	        _la = this._input.LA(1);
 	        if(!((((_la) & ~0x1f) === 0 && ((1 << _la) & 28672) !== 0))) {
 	        this._errHandler.recoverInline(this);
@@ -642,11 +568,11 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	openState() {
 	    let localctx = new OpenStateContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 32, YourLanguageParser.RULE_openState);
+	    this.enterRule(localctx, 30, YourLanguageParser.RULE_openState);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 122;
+	        this.state = 106;
 	        _la = this._input.LA(1);
 	        if(!(_la===15 || _la===16)) {
 	        this._errHandler.recoverInline(this);
@@ -673,11 +599,11 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 	turnState() {
 	    let localctx = new TurnStateContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 34, YourLanguageParser.RULE_turnState);
+	    this.enterRule(localctx, 32, YourLanguageParser.RULE_turnState);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 124;
+	        this.state = 108;
 	        _la = this._input.LA(1);
 	        if(!(_la===17 || _la===18)) {
 	        this._errHandler.recoverInline(this);
@@ -702,65 +628,19 @@ export default class YourLanguageParser extends antlr4.Parser {
 
 
 
-	time() {
-	    let localctx = new TimeContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 36, YourLanguageParser.RULE_time);
-	    try {
-	        this.enterOuterAlt(localctx, 1);
-	        this.state = 126;
-	        this.match(YourLanguageParser.TIME);
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
-	duration() {
-	    let localctx = new DurationContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 38, YourLanguageParser.RULE_duration);
-	    try {
-	        this.enterOuterAlt(localctx, 1);
-	        this.state = 128;
-	        this.match(YourLanguageParser.DURATION);
-	    } catch (re) {
-	    	if(re instanceof antlr4.error.RecognitionException) {
-		        localctx.exception = re;
-		        this._errHandler.reportError(this, re);
-		        this._errHandler.recover(this, re);
-		    } else {
-		    	throw re;
-		    }
-	    } finally {
-	        this.exitRule();
-	    }
-	    return localctx;
-	}
-
-
-
 	error() {
 	    let localctx = new ErrorContext(this, this._ctx, this.state);
-	    this.enterRule(localctx, 40, YourLanguageParser.RULE_error);
+	    this.enterRule(localctx, 34, YourLanguageParser.RULE_error);
 	    var _la = 0;
 	    try {
 	        this.enterOuterAlt(localctx, 1);
-	        this.state = 131; 
+	        this.state = 111; 
 	        this._errHandler.sync(this);
 	        _la = this._input.LA(1);
 	        do {
-	            this.state = 130;
+	            this.state = 110;
 	            this.match(YourLanguageParser.ERROR_CHAR);
-	            this.state = 133; 
+	            this.state = 113; 
 	            this._errHandler.sync(this);
 	            _la = this._input.LA(1);
 	        } while(_la===27);
@@ -812,25 +692,22 @@ YourLanguageParser.ERROR_CHAR = 27;
 
 YourLanguageParser.RULE_program = 0;
 YourLanguageParser.RULE_commandList = 1;
-YourLanguageParser.RULE_command = 2;
-YourLanguageParser.RULE_simpleCommand = 3;
-YourLanguageParser.RULE_controlCommand = 4;
-YourLanguageParser.RULE_basicCommand = 5;
-YourLanguageParser.RULE_openCommand = 6;
-YourLanguageParser.RULE_closeCommand = 7;
-YourLanguageParser.RULE_turnonCommand = 8;
-YourLanguageParser.RULE_turnoffCommand = 9;
-YourLanguageParser.RULE_scheduleTiming = 10;
-YourLanguageParser.RULE_ifCommand = 11;
-YourLanguageParser.RULE_elseBlock = 12;
-YourLanguageParser.RULE_condition = 13;
-YourLanguageParser.RULE_openTask = 14;
-YourLanguageParser.RULE_turnTask = 15;
-YourLanguageParser.RULE_openState = 16;
-YourLanguageParser.RULE_turnState = 17;
-YourLanguageParser.RULE_time = 18;
-YourLanguageParser.RULE_duration = 19;
-YourLanguageParser.RULE_error = 20;
+YourLanguageParser.RULE_simpleCommand = 2;
+YourLanguageParser.RULE_scheduleTiming = 3;
+YourLanguageParser.RULE_basicCommand = 4;
+YourLanguageParser.RULE_openCommand = 5;
+YourLanguageParser.RULE_closeCommand = 6;
+YourLanguageParser.RULE_turnonCommand = 7;
+YourLanguageParser.RULE_turnoffCommand = 8;
+YourLanguageParser.RULE_controlCommand = 9;
+YourLanguageParser.RULE_ifCommand = 10;
+YourLanguageParser.RULE_elseBlock = 11;
+YourLanguageParser.RULE_condition = 12;
+YourLanguageParser.RULE_openTask = 13;
+YourLanguageParser.RULE_turnTask = 14;
+YourLanguageParser.RULE_openState = 15;
+YourLanguageParser.RULE_turnState = 16;
+YourLanguageParser.RULE_error = 17;
 
 class ProgramContext extends antlr4.ParserRuleContext {
 
@@ -893,16 +770,12 @@ class CommandListContext extends antlr4.ParserRuleContext {
 	    return this.getToken(YourLanguageParser.SEMICOLON, 0);
 	};
 
-	controlCommand() {
-	    return this.getTypedRuleContext(ControlCommandContext,0);
-	};
-
 	commandList() {
 	    return this.getTypedRuleContext(CommandListContext,0);
 	};
 
-	error() {
-	    return this.getTypedRuleContext(ErrorContext,0);
+	controlCommand() {
+	    return this.getTypedRuleContext(ControlCommandContext,0);
 	};
 
 	enterRule(listener) {
@@ -914,45 +787,6 @@ class CommandListContext extends antlr4.ParserRuleContext {
 	exitRule(listener) {
 	    if(listener instanceof YourLanguageListener ) {
 	        listener.exitCommandList(this);
-		}
-	}
-
-
-}
-
-
-
-class CommandContext extends antlr4.ParserRuleContext {
-
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = YourLanguageParser.RULE_command;
-    }
-
-	simpleCommand() {
-	    return this.getTypedRuleContext(SimpleCommandContext,0);
-	};
-
-	controlCommand() {
-	    return this.getTypedRuleContext(ControlCommandContext,0);
-	};
-
-	enterRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.enterCommand(this);
-		}
-	}
-
-	exitRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.exitCommand(this);
 		}
 	}
 
@@ -1000,7 +834,7 @@ class SimpleCommandContext extends antlr4.ParserRuleContext {
 
 
 
-class ControlCommandContext extends antlr4.ParserRuleContext {
+class ScheduleTimingContext extends antlr4.ParserRuleContext {
 
     constructor(parser, parent, invokingState) {
         if(parent===undefined) {
@@ -1011,22 +845,34 @@ class ControlCommandContext extends antlr4.ParserRuleContext {
         }
         super(parent, invokingState);
         this.parser = parser;
-        this.ruleIndex = YourLanguageParser.RULE_controlCommand;
+        this.ruleIndex = YourLanguageParser.RULE_scheduleTiming;
     }
 
-	ifCommand() {
-	    return this.getTypedRuleContext(IfCommandContext,0);
+	AT() {
+	    return this.getToken(YourLanguageParser.AT, 0);
+	};
+
+	TIME() {
+	    return this.getToken(YourLanguageParser.TIME, 0);
+	};
+
+	IN() {
+	    return this.getToken(YourLanguageParser.IN, 0);
+	};
+
+	DURATION() {
+	    return this.getToken(YourLanguageParser.DURATION, 0);
 	};
 
 	enterRule(listener) {
 	    if(listener instanceof YourLanguageListener ) {
-	        listener.enterControlCommand(this);
+	        listener.enterScheduleTiming(this);
 		}
 	}
 
 	exitRule(listener) {
 	    if(listener instanceof YourLanguageListener ) {
-	        listener.exitControlCommand(this);
+	        listener.exitScheduleTiming(this);
 		}
 	}
 
@@ -1238,7 +1084,7 @@ class TurnoffCommandContext extends antlr4.ParserRuleContext {
 
 
 
-class ScheduleTimingContext extends antlr4.ParserRuleContext {
+class ControlCommandContext extends antlr4.ParserRuleContext {
 
     constructor(parser, parent, invokingState) {
         if(parent===undefined) {
@@ -1249,34 +1095,22 @@ class ScheduleTimingContext extends antlr4.ParserRuleContext {
         }
         super(parent, invokingState);
         this.parser = parser;
-        this.ruleIndex = YourLanguageParser.RULE_scheduleTiming;
+        this.ruleIndex = YourLanguageParser.RULE_controlCommand;
     }
 
-	AT() {
-	    return this.getToken(YourLanguageParser.AT, 0);
-	};
-
-	time() {
-	    return this.getTypedRuleContext(TimeContext,0);
-	};
-
-	IN() {
-	    return this.getToken(YourLanguageParser.IN, 0);
-	};
-
-	duration() {
-	    return this.getTypedRuleContext(DurationContext,0);
+	ifCommand() {
+	    return this.getTypedRuleContext(IfCommandContext,0);
 	};
 
 	enterRule(listener) {
 	    if(listener instanceof YourLanguageListener ) {
-	        listener.enterScheduleTiming(this);
+	        listener.enterControlCommand(this);
 		}
 	}
 
 	exitRule(listener) {
 	    if(listener instanceof YourLanguageListener ) {
-	        listener.exitScheduleTiming(this);
+	        listener.exitControlCommand(this);
 		}
 	}
 
@@ -1311,12 +1145,12 @@ class IfCommandContext extends antlr4.ParserRuleContext {
 	    return this.getToken(YourLanguageParser.LBRACE, 0);
 	};
 
-	RBRACE() {
-	    return this.getToken(YourLanguageParser.RBRACE, 0);
-	};
-
 	commandList() {
 	    return this.getTypedRuleContext(CommandListContext,0);
+	};
+
+	RBRACE() {
+	    return this.getToken(YourLanguageParser.RBRACE, 0);
 	};
 
 	elseBlock() {
@@ -1362,12 +1196,12 @@ class ElseBlockContext extends antlr4.ParserRuleContext {
 	    return this.getToken(YourLanguageParser.LBRACE, 0);
 	};
 
-	RBRACE() {
-	    return this.getToken(YourLanguageParser.RBRACE, 0);
-	};
-
 	commandList() {
 	    return this.getTypedRuleContext(CommandListContext,0);
+	};
+
+	RBRACE() {
+	    return this.getToken(YourLanguageParser.RBRACE, 0);
 	};
 
 	enterRule(listener) {
@@ -1598,76 +1432,6 @@ class TurnStateContext extends antlr4.ParserRuleContext {
 
 
 
-class TimeContext extends antlr4.ParserRuleContext {
-
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = YourLanguageParser.RULE_time;
-    }
-
-	TIME() {
-	    return this.getToken(YourLanguageParser.TIME, 0);
-	};
-
-	enterRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.enterTime(this);
-		}
-	}
-
-	exitRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.exitTime(this);
-		}
-	}
-
-
-}
-
-
-
-class DurationContext extends antlr4.ParserRuleContext {
-
-    constructor(parser, parent, invokingState) {
-        if(parent===undefined) {
-            parent = null;
-        }
-        if(invokingState===undefined || invokingState===null) {
-            invokingState = -1;
-        }
-        super(parent, invokingState);
-        this.parser = parser;
-        this.ruleIndex = YourLanguageParser.RULE_duration;
-    }
-
-	DURATION() {
-	    return this.getToken(YourLanguageParser.DURATION, 0);
-	};
-
-	enterRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.enterDuration(this);
-		}
-	}
-
-	exitRule(listener) {
-	    if(listener instanceof YourLanguageListener ) {
-	        listener.exitDuration(this);
-		}
-	}
-
-
-}
-
-
-
 class ErrorContext extends antlr4.ParserRuleContext {
 
     constructor(parser, parent, invokingState) {
@@ -1714,15 +1478,14 @@ class ErrorContext extends antlr4.ParserRuleContext {
 
 YourLanguageParser.ProgramContext = ProgramContext; 
 YourLanguageParser.CommandListContext = CommandListContext; 
-YourLanguageParser.CommandContext = CommandContext; 
 YourLanguageParser.SimpleCommandContext = SimpleCommandContext; 
-YourLanguageParser.ControlCommandContext = ControlCommandContext; 
+YourLanguageParser.ScheduleTimingContext = ScheduleTimingContext; 
 YourLanguageParser.BasicCommandContext = BasicCommandContext; 
 YourLanguageParser.OpenCommandContext = OpenCommandContext; 
 YourLanguageParser.CloseCommandContext = CloseCommandContext; 
 YourLanguageParser.TurnonCommandContext = TurnonCommandContext; 
 YourLanguageParser.TurnoffCommandContext = TurnoffCommandContext; 
-YourLanguageParser.ScheduleTimingContext = ScheduleTimingContext; 
+YourLanguageParser.ControlCommandContext = ControlCommandContext; 
 YourLanguageParser.IfCommandContext = IfCommandContext; 
 YourLanguageParser.ElseBlockContext = ElseBlockContext; 
 YourLanguageParser.ConditionContext = ConditionContext; 
@@ -1730,6 +1493,4 @@ YourLanguageParser.OpenTaskContext = OpenTaskContext;
 YourLanguageParser.TurnTaskContext = TurnTaskContext; 
 YourLanguageParser.OpenStateContext = OpenStateContext; 
 YourLanguageParser.TurnStateContext = TurnStateContext; 
-YourLanguageParser.TimeContext = TimeContext; 
-YourLanguageParser.DurationContext = DurationContext; 
 YourLanguageParser.ErrorContext = ErrorContext; 
